@@ -1,0 +1,242 @@
+.show-alert {
+    color: red !important;
+  }
+
+.playboard {
+    background-image: url("../../assets/img/wood.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100%;
+    max-width: 100%;
+    margin: 0;
+    color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-stack {
+    position: absolute;
+    bottom: 60%;
+
+    img {
+        position: absolute;
+        height: 250px;
+        
+    }
+}
+
+.top-card {
+    transition: all 125ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.pick-card {
+    transition: all 125ms ease-in-out;
+    animation: pick-card-animation 2s ease-in-out;
+    transform: scale(1.2) translateX(200px) translateY(-100px) rotate(20deg)
+}
+
+.playedCard {
+    right: 25px;
+    transform: scale(1.2) translateX(220px) translateY(-100px) rotate(20deg);
+}
+
+
+
+
+
+.hide-top-card{
+    display: none!important;
+}
+
+.show-endscreen {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    background-color: white;
+    display: flex!important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 20%;
+    left: 25%;
+    top: 40%;
+    border-radius: 10px;
+    color: white;
+}
+
+.hide-endscreen {
+    display: none;
+}
+
+
+
+@keyframes pick-card-animation {
+    0% {
+        transform: scale(1);
+    }
+
+    40% {
+        transform: scale(1.7);
+    }
+
+    30% {
+        transform: scale(1.7);
+    }
+
+
+    50% {
+        transform: scale(1.7);
+    }
+
+    100% {
+        transform: scale(1.2) translateX(220px) translateY(-100px) rotate(20deg);
+    }
+}
+
+.add-button {
+    position: absolute;
+    z-index: 100;
+    bottom: 2%;
+    left: 5%;
+    width: 80px;
+    height: 80px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.font-button {
+    font-size: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.player-container-wrapper {
+    display: flex;
+    background-color: transparent;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 18px;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .player-container-wrapper {
+        width: 100%;
+        height: 30%;
+        max-width: 100%;
+        flex-direction: row;
+        overflow: hidden;
+        gap: 8px;
+        justify-content: space-evenly;
+        
+    }
+
+    .card-stack {
+        position: absolute;
+        left: 40%;}
+
+    .player-container {
+        width: 10%;
+        height: 100px;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        margin-top: -10px;
+        font-size: 20px;
+    }
+
+    .player-name {
+        font-size: 30px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .player-container {
+        width: 8%;
+    }
+
+    .card-stack {
+        left: 45%;
+    }
+        
+    }
+
+
+
+    @media only screen and (max-width: 500px) {
+        .add-button {
+            width: 60px;
+            height: 60px;
+        }
+    
+        .card-stack {
+            position: absolute;
+            left: 40%;
+        
+            img {
+                position: absolute;
+                height: 150px;
+            }
+        }
+    
+     
+    
+        .playedCard {
+            right: 1px;
+            transform: scale(1.1) translateX(120px) translateY(-80px) rotate(10deg);
+        }
+    
+        .pick-card {
+            transition: all 125ms ease-in-out;
+            animation: pick-card-animation-resp 2s ease-in-out;
+            transform: scale(1.2) translateX(120px) translateY(-80px) rotate(10deg)
+        }
+    
+        @keyframes pick-card-animation-resp {
+            0% {
+                transform: scale(1);
+            }
+        
+            40% {
+                transform: scale(1.7);
+            }
+        
+            30% {
+                transform: scale(1.7);
+            }
+        
+        
+            50% {
+                transform: scale(1.7);
+            }
+        
+            100% {
+                transform: scale(1.2) translateX(120px) translateY(-80px) rotate(10deg);
+            }
+        }
+    
+       
+    }
+    
+    
+

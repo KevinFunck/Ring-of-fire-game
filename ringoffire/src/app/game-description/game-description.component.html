@@ -1,0 +1,6 @@
+<mat-card [class.show-alert]="!this.readyToStart"   class="game-description">
+    <mat-card-title>{{ card ? title : 'New Game'}}</mat-card-title>
+    <mat-card-content>{{ card ? description : 'Please add between 2 and 10 players and pick a card' }}</mat-card-content>
+  </mat-card>
+
+
